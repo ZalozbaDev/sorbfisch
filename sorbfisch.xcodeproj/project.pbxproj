@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52D79259307DF8700077011E /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52D79258307DF8700077011E /* WhisperKit */; };
 		8FCBB6EB3073EC9800CD2FA4 /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 8FCBB6EA3073EC9800CD2FA4 /* FluidAudio */; };
-		8FCBB6EE3073ECB800CD2FA4 /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8FCBB6ED3073ECB800CD2FA4 /* WhisperKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FCBB6EE3073ECB800CD2FA4 /* WhisperKit in Frameworks */,
+				52D79259307DF8700077011E /* WhisperKit in Frameworks */,
 				8FCBB6EB3073EC9800CD2FA4 /* FluidAudio in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,10 +52,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52D79257307DF8700077011E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FCBB6763073EBA300CD2FA4 = {
 			isa = PBXGroup;
 			children = (
 				8FCBB6813073EBA300CD2FA4 /* sorbfisch */,
+				52D79257307DF8700077011E /* Frameworks */,
 				8FCBB6803073EBA300CD2FA4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +97,7 @@
 			name = sorbfisch;
 			packageProductDependencies = (
 				8FCBB6EA3073EC9800CD2FA4 /* FluidAudio */,
-				8FCBB6ED3073ECB800CD2FA4 /* WhisperKit */,
+				52D79258307DF8700077011E /* WhisperKit */,
 			);
 			productName = sorbfisch;
 			productReference = 8FCBB67F3073EBA300CD2FA4 /* sorbfisch.app */;
@@ -121,7 +129,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				8FCBB6E93073EC9800CD2FA4 /* XCRemoteSwiftPackageReference "FluidAudio" */,
-				8FCBB6EC3073ECB800CD2FA4 /* XCRemoteSwiftPackageReference "argmax-oss-swift" */,
+				52D79256307DF85F0077011E /* XCLocalSwiftPackageReference "../argmax-oss-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8FCBB6803073EBA300CD2FA4 /* Products */;
@@ -380,6 +388,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		52D79256307DF85F0077011E /* XCLocalSwiftPackageReference "../argmax-oss-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../argmax-oss-swift";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		8FCBB6E93073EC9800CD2FA4 /* XCRemoteSwiftPackageReference "FluidAudio" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -389,26 +404,18 @@
 				version = 0.17.5;
 			};
 		};
-		8FCBB6EC3073ECB800CD2FA4 /* XCRemoteSwiftPackageReference "argmax-oss-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/argmaxinc/argmax-oss-swift.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.1.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		52D79258307DF8700077011E /* WhisperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52D79256307DF85F0077011E /* XCLocalSwiftPackageReference "../argmax-oss-swift" */;
+			productName = WhisperKit;
+		};
 		8FCBB6EA3073EC9800CD2FA4 /* FluidAudio */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8FCBB6E93073EC9800CD2FA4 /* XCRemoteSwiftPackageReference "FluidAudio" */;
 			productName = FluidAudio;
-		};
-		8FCBB6ED3073ECB800CD2FA4 /* WhisperKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8FCBB6EC3073ECB800CD2FA4 /* XCRemoteSwiftPackageReference "argmax-oss-swift" */;
-			productName = WhisperKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
