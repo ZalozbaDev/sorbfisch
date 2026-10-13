@@ -205,6 +205,7 @@ final class LiveTranslationViewModel: ObservableObject {
                 modelFolder: modelURL.path,
                 tokenizerFolder: actualTokenizerURL,
                 verbose: true,
+                logLevel: Logging.LogLevel.debug,
                 prewarm: false,
                 load: false,
                 download: false
